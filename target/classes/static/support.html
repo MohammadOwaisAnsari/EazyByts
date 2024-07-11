@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support Ticket</title>
+    <link rel="stylesheet" href="support.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Customer Support</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="contacts.html"><i class="fas fa-address-book"></i> Contacts</a></li>
+            <li><a href="sales.html"><i class="fas fa-chart-line"></i> Sales</a></li>
+            <li><a href="tasks.html"><i class="fas fa-tasks"></i> Tasks</a></li>
+            <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="support-ticket" class="container">
+            <h2>Create Support Ticket</h2>
+            <form id="support-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Your Email" required>
+                
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" placeholder="Ticket Subject" required>
+                
+                <label for="priority">Priority:</label>
+                <select id="priority" required>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                
+                <label for="description">Description:</label>
+                <textarea id="description" placeholder="Describe your issue" rows="4" required></textarea>
+                
+                <button type="button" onclick="submitTicket()">Submit Ticket</button>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ticket Number</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Subject</th>
+                        <th>Priority</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="ticket-list"></tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 CRM System. All rights reserved.
+           <br><strong> developed by:-Mohammad Owais Ansari.
+        </p>
+    </footer>
+    <script src="support.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management - CRM System</title>
+    <link rel="stylesheet" href="task.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Task Management</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="contacts.html"><i class="fas fa-address-book"></i> Contacts</a></li>
+                <li><a href="sales.html"><i class="fas fa-chart-line"></i> Sales</a></li>
+                <li><a href="tasks.html" class="active"><i class="fas fa-tasks"></i> Tasks</a></li>
+                <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="task-management" class="container">
+            <h2>Task Management</h2>
+            <form id="task-form">
+                <label for="task-name">Task Name:</label>
+                <input type="text" id="task-name" name="task-name" required>
+                <label for="assigned-to">Assigned To:</label>
+                <input type="text" id="assigned-to" name="assigned-to" required>
+                <label for="due-date">Due Date:</label>
+                <input type="date" id="due-date" name="due-date" required>
+                <label for="priority">Priority:</label>
+                <select id="priority" name="priority" required>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                
+                <label for="status">Status:</label>
+                <select id="status" name="status" required>
+                    <option value="Not Started">Not Started</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+                <button type="submit">Add Task</button>
+            </form>
+
+            <!-- Task list/table -->
+            <div class="task-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task Name</th>
+                            <th>Assigned To</th>
+                            <th>Due Date</th>
+                            <th>priority</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="task-list">
+                        <!-- Task rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CRM System. All rights reserved.
+           <br>
+           <strong> developed by:-Mohammad Owais Ansari.
+        </p>
+    </footer>
+
+    <script src="task.js"></script>
+</body>
+</html>

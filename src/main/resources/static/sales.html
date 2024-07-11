@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Pipeline Tracking</title>
+    <link rel="stylesheet" href="sales.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Sales Pipeline Tracking</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="contacts.html"><i class="fas fa-address-book"></i> Contacts</a></li>
+            <li><a href="sales.html"><i class="fas fa-chart-line"></i> Sales</a></li>
+            <li><a href="tasks.html"><i class="fas fa-tasks"></i> Tasks</a></li>
+            <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="sales-pipeline" class="container">
+            <h2>Sales Pipeline Tracking</h2>
+            <form id="sales-form">
+                <label for="deal-name">Deal Name:</label>
+                <input type="text" id="deal-name" placeholder="Deal Name">
+                
+                <label for="assigned-to">Assigned To:</label>
+                <input type="text" id="assigned-to" placeholder="Assigned To">
+                
+                <label for="deal-value">Deal Value:</label>
+                <input type="number" id="deal-value" placeholder="Deal Value">
+                
+                <label for="status">Status:</label>
+                <select id="status">
+                    <option value="prospecting">Prospecting</option>
+                    <option value="qualification">Qualification</option>
+                    <option value="proposal">Proposal</option>
+                    <option value="negotiation">Negotiation</option>
+                    <option value="closed won">Closed Won</option>
+                    <option value="closed lost">Closed Lost</option>
+                </select>
+                
+                <button type="button" onclick="addDeal()">Add Deal</button>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Deal Name</th>
+                        <th>Assigned To</th>
+                        <th>Deal Value</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="deal-list"></tbody>
+            </table>
+        </section>
+        <section id="chart-section" class="container">
+            <h2>Sales Pipeline Chart</h2>
+            <canvas id="salesChart"></canvas>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 CRM System. All rights reserved.
+           <br><strong> developed by:-Mohammad Owais Ansari.
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="sales.js"></script>
+</body>
+</html>
+
